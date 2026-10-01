@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hatid - Motorcycle Ride Booking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Hatid</h1>
+  <p class="tagline">A simple motorcycle ride booking website (school project)</p>
+
+  <div class="nav">
+    <a href="#how">How it Works</a> |
+    <a href="#book">Book a Ride</a> |
+    <a href="#riders">Ride History</a>
+  </div>
+
+  <hr>
+
+  <!-- INTRO -->
+  <div class="section">
+    <h2>About Hatid</h2>
+    <p>
+      Hatid is a motorcycle ride booking website similar to Angkas or Grab.
+      A user can enter a pickup location and a drop-off location, choose a
+      ride type, see an estimated fare, and request a ride. The website will
+      then simulate finding a nearby rider.
+    </p>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section" id="how">
+    <h2>How it Works</h2>
+    <ol>
+      <li>Enter your pickup and drop-off location.</li>
+      <li>Choose a ride type (Standard, Priority, or Padala).</li>
+      <li>Check the estimated fare, then press "Request a Ride".</li>
+      <li>Wait for the system to match you with a rider.</li>
+      <li>Your completed ride will be saved under Ride History.</li>
+    </ol>
+  </div>
+
+  <!-- BOOKING -->
+  <div class="section" id="book">
+    <h2>Book a Ride</h2>
+
+    <form id="booking-form">
+      <label for="pickup">Pickup Location:</label><br>
+      <input type="text" id="pickup" placeholder="e.g. 14 Marigold St." required><br><br>
+
+      <label for="dropoff">Drop-off Location:</label><br>
+      <input type="text" id="dropoff" placeholder="e.g. Cityplace Mall" required><br><br>
+
+      <label>Ride Type:</label><br>
+      <label class="radio-line">
+        <input type="radio" name="ride-type" value="standard" data-multiplier="1" checked>
+        Standard - base fare (one passenger)
+      </label><br>
+      <label class="radio-line">
+        <input type="radio" name="ride-type" value="priority" data-multiplier="1.35">
+        Priority - +35% (closest rider matched first)
+      </label><br>
+      <label class="radio-line">
+        <input type="radio" name="ride-type" value="padala" data-multiplier="1.6">
+        Padala - +60% (send a package, no passenger)
+      </label><br><br>
+
+      <p><strong>Estimated Fare: <span id="fare-amount">₱—</span></strong></p>
+
+      <div class="box" id="route-box">
+        <p>Route preview:</p>
+        <p id="route-text">Enter a pickup and drop-off to see your route.</p>
+      </div>
+      <br>
+
+      <button type="submit" id="request-btn">Request a Ride</button>
+    </form>
+
+    <div class="box" id="matching-panel" hidden>
+      <p id="matching-status">Looking for a nearby rider...</p>
+      <div id="rider-card" hidden>
+        <p>Rider: <span id="rider-name">-</span></p>
+        <p>Plate Number: <span id="rider-plate">-</span></p>
+        <p>ETA: <span id="rider-eta">-</span></p>
+        <button type="button" id="cancel-ride">Cancel Ride</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIDE HISTORY -->
+  <div class="section" id="riders">
+    <h2>Ride History</h2>
+    <p id="riders-empty">No rides yet. Book one above and it will show up here.</p>
+    <table id="ride-table">
+      <thead>
+        <tr>
+          <th>Route</th>
+          <th>Type</th>
+          <th>Fare</th>
+          <th>Rider</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="ride-list"></tbody>
+    </table>
+  </div>
+
+  <hr>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

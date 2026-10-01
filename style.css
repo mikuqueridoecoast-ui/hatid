@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: #222222;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  text-align: center;
+  color: #555555;
+  margin-top: 0;
+}
+
+.nav {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.nav a {
+  color: #0645AD;
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #cccccc;
+  margin: 20px 0;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #1a1a1a;
+  border-bottom: 2px solid #333333;
+  padding-bottom: 4px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.radio-line {
+  font-weight: normal;
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #999999;
+}
+
+button {
+  background-color: #4285f4;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3367d6;
+}
+
+#cancel-ride {
+  background-color: #cccccc;
+  color: #222222;
+  margin-top: 8px;
+}
+
+.box {
+  border: 1px solid #cccccc;
+  background-color: #f5f5f5;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #cccccc;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background-color: #eeeeee;
+}
+
+.footer-note {
+  text-align: center;
+  font-size: 12px;
+  color: #777777;
+}
